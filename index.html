@@ -6,17 +6,17 @@
     <title>Document</title>
 </head>
 <script>
-    
+    //function that gets a random word by the computer from the declared array    
     function getComputerChoice(){
         const computerValue = ["rock", "paper", "scissors"];
         return computerValue[Math.floor(Math.random() * computerValue.length)];
     }
-    
-
+    // implementing the function that gets human choice/input
     function getHumanChoice(){
         const humanChoice = prompt("enter a value");
         return humanChoice.toLowerCase();
     }
+    
     const human = getHumanChoice();
     const computer = getComputerChoice();
 
