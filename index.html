@@ -6,15 +6,32 @@
     <title>Document</title>
 </head>
 <script>
-    function getComputerChoice(){
-        const options = ["rock", "papper", "scissors"];
-        const computerChoice = options[Math.floor(Math.random() * options.length)];
-        return computerChoice;
-    }
-    console.log(getComputerChoice());
-
-    // logic to get human choice
     
+    function getComputerChoice(){
+        const computerValue = ["rock", "paper", "scissors"];
+        return computerValue[Math.floor(Math.random() * computerValue.length)];
+    }
+    
+
+    function getHumanChoice(){
+        const humanChoice = prompt("enter a value");
+        return humanChoice.toLowerCase();
+    }
+    const human = getHumanChoice();
+    const computer = getComputerChoice();
+
+    console.log("human: ", human);
+    console.log("computer: ", computer);
+
+    if(human === computer){
+        console.log("your are correct");
+    }
+    else if(human === null ){
+        alert("enter a fucking value you bastard");
+    }
+    else[
+        console.log("you are wrong")
+    ]
 
 
 
