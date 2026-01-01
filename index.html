@@ -8,13 +8,13 @@
 <script>
     // logic to get computer choice
     function getComputerChoice(){
-        const options= ["stone", "paper", "scissors"];
+        const options= ["rock", "paper", "scissors"];
         let computerChoice = options[Math.floor(Math.random() * options.length)];
         return computerChoice;
     }
     // logic to get human choice
     function getHumanChoice(){
-        let humanChoice = prompt("stone, eba or Scissors, pick your poison");
+        let humanChoice = prompt("Rock, Paper or Scissors, pick your poison");
         return humanChoice.toLowerCase();
     }
     // creating the game function that lets us play the game multiple times 
