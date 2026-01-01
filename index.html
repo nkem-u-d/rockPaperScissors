@@ -6,10 +6,6 @@
     <title>Document</title>
 </head>
 <script>
-    // declaring the players score variables
-    let humanScore = 0;
-    let computerScore = 0;
-    
     // logic to get computer choice
     function getComputerChoice(){
         const options= ["rock", "paper", "scissors"];
@@ -23,13 +19,18 @@
 
     }
     // creating storage containers for the functions
-    const human = getHumanChoice();
-    const computer = getComputerChoice()
     console.log("human: ", human );
     console.log("computer: ", computer);
 
+    // comparing human choice and computer choice and outputting the results]
     
-    function playRound(humanChoice, computerChoice){
+
+
+    function playGame(){
+        let humanScore = 0;
+        let computerScore = 0;
+
+        function playRound(humanChoice, computerChoice){
         if ( humanChoice === computerChoice){
             console.log("its a tie!");
         }
@@ -45,10 +46,21 @@
             computerScore++;
             console.log(`you lost: ${ computerChoice} beats ${humanChoice}`);
         }
-         console.log(`Score - Human: ${humanScore} | Computer: ${computerScore}`);
-       
+         console.log(`Score: \n  Human: ${humanScore} | Computer: ${computerScore}`);
+    
     }
-    playRound(human, computer);
+    // to play 5 rounds 
+    for (let i = 0; i <= 5; i++){
+        console.log(`Round ${i}`);
+        const human = getHumanChoice() 
+        const computer = getComputerChoice()
+        playRound(human, computer);
+    }
+
+    }
+    playGame()
+
+    
 
     
     
