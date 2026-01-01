@@ -6,22 +6,52 @@
     <title>Document</title>
 </head>
 <script>
+    // declaring the players score variables
+    let humanScore = 0;
+    let computerScore = 0;
     
     // logic to get computer choice
     function getComputerChoice(){
         const options= ["rock", "paper", "scissors"];
-        let computerCHoice = options[Math.floor(Math.random() * options.length)];
-        return computerCHoice;
-
+        let computerChoice = options[Math.floor(Math.random() * options.length)];
+        return computerChoice;
     }
-    console.log(getComputerChoice());
-
+    // logic to get human choice
     function getHumanChoice(){
         let humanChoice = prompt('rock, paper or Scissors:');
-        return humanChoice;
+        return humanChoice.toLowerCase();
 
     }
-    console.log(getHumanChoice())    
+    // creating storage containers for the functions
+    const human = getHumanChoice();
+    const computer = getComputerChoice()
+    console.log("human: ", human );
+    console.log("computer: ", computer);
+
+    
+    function playRound(humanChoice, computerChoice){
+        if (humanChoice == "rock" && computerChoice == "scissors"){
+            console.log(`you won! ${humanChoice} beats ${computerChoice} `);
+        }
+        else if (humanChoice == "paper" && computerChoice == "rock"){
+            console.log(`you won because ${humanChoice} beats ${computerChoice}`);
+        }
+        else if (humanChoice == "scissors" && computerChoice == "paper"){
+            console.log(`you won! because ${humanChoice} beats ${computerChoice}`);
+        }
+        else if ( humanChoice === computerChoice){
+            console.log("its a tie!");
+        }
+        else{
+            console.log(`you lost: ${ computerChoice} beats ${humanChoice}`);
+        }
+        
+       
+    }
+    playRound(human, computer);
+
+    
+    
 
 
 </script>
