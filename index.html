@@ -16,14 +16,9 @@
     function getHumanChoice(){
         let humanChoice = prompt('rock, paper or Scissors:');
         return humanChoice.toLowerCase();
-
     }
+    // creating the game function that lets us play the game multiple times 
     
-
-    // comparing human choice and computer choice and outputting the results]
-    
-
-
     function playGame(){
         let humanScore = 0;
         let computerScore = 0;
@@ -38,11 +33,11 @@
             (humanChoice === "scissors" && computerChoice === "paper")
         ){
             humanScore++;
-            console.log(`you won because ${humanChoice} beats ${computerChoice}` );
+            console.log(`Genius!, you won because ${humanChoice} beats ${computerChoice}` );
         }
         else{
             computerScore++;
-            console.log(`you lost: ${ computerChoice} beats ${humanChoice}`);
+            console.log(`Dumb-ass, you lost because ${ computerChoice} beats ${humanChoice}`);
         }
          console.log(`Score: \n  Human: ${humanScore} | Computer: ${computerScore}`);
     
@@ -55,13 +50,13 @@
         playRound(human, computer);
     }
     if (humanScore > computerScore){
-        console.log("you won the game, you're the champion");
+        console.log("you won the game, at least you're not a complete failure, yet.".toLowerCase());
     }
     else if(computerScore > humanScore){
-        console.log("you lost the game, try again");
+        console.log("you lost the game,how does it feel losing to a computer, you retard".toUpperCase());
     } 
     else{
-        console.log("the game was a tie");
+        console.log("the game was a tie".toUpperCase());
     }
 
     }
