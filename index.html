@@ -18,9 +18,7 @@
         return humanChoice.toLowerCase();
 
     }
-    // creating storage containers for the functions
-    console.log("human: ", human );
-    console.log("computer: ", computer);
+    
 
     // comparing human choice and computer choice and outputting the results]
     
@@ -55,6 +53,15 @@
         const human = getHumanChoice() 
         const computer = getComputerChoice()
         playRound(human, computer);
+    }
+    if (humanScore > computerScore){
+        console.log("you won the game, you're the champion");
+    }
+    else if(computerScore > humanScore){
+        console.log("you lost the game, try again");
+    } 
+    else{
+        console.log("the game was a tie");
     }
 
     }
